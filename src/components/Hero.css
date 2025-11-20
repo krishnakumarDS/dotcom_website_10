@@ -1,0 +1,95 @@
+.hero {
+  background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Light blue gradient */
+  padding: 8rem 0;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Initial fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0d47a1; /* Dark blue */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-in-out; /* Slide-in animation */
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  animation: slideInRight 1s ease-in-out; /* Slide-in animation */
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.hero-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #1e88e5; /* Lighter blue */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0d47a1; /* Dark blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
